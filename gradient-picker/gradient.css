@@ -1,0 +1,19 @@
+.gradient {
+	padding: 10px 18px;
+	width: 100%;
+	border: 1px solid;
+	border-radius: 5px;
+}
+.select-gradient {
+	width: 25%;
+	margin-bottom: 10px;
+} 
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default  {
+	background: url('');
+	border: 1px solid #D3D3D3;
+    color: #555555;
+    font-weight: normal;
+}
+.colorpicker {
+	z-index: 2;
+}

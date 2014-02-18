@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="en" />
+
+		<link rel="stylesheet" type="text/css" href="extensions/jquery-ui-1.10.4/css/smoothness/jquery-ui-1.10.4.custom.css" />
+		<link rel="stylesheet" type="text/css" href="extensions/colorpicker/css/colorpicker.css" />
+		<link rel="stylesheet" type="text/css" href="extensions/colorpicker/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="gradient-picker/gradient.css" />
+		<script type="text/javascript" src="extensions/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="extensions/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
+		<script type="text/javascript" src="extensions/colorpicker/js/colorpicker.js"></script>
+		<script type="text/javascript" src="gradient-picker/gradient.js"></script>
+		<title>gradient-picker</title>
+		
+		<style>
+			table {
+				width: 100%;
+			}
+			td {
+				padding: 30px;
+				width: 20%;
+				height: 100px;
+				color: black;
+				font-weight: bold;
+				font-size: 16px;
+			}
+			.body {
+				margin: 0 auto;
+				width: 90%;
+				padding-top: 20px;
+			}
+		</style>
+    </head>
+
+<body>
+	<div class="body">
+		<h1>Gradient-picker v 0.5</h1>
+		<br/>
+		<table>
+			<tr>
+				<td colspan="1"><div id="gradient-1"></div></td>
+				<td colspan="4" id="color-set-1">1</td>
+			</tr>
+			<tr>
+				<td colspan="2"><div id="gradient-2"></div></td>
+				<td colspan="3" id="color-set-2">2</td>
+			</tr>
+			<tr>
+				<td colspan="3"><div id="gradient-3"></div></td>
+				<td colspan="2" id="color-set-3">3</td>
+			</tr>
+			<tr>
+				<td colspan="4"><div id="gradient-4"></div></td>
+				<td colspan="1" id="color-set-4">4</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+	
+	<script>
+		$(document).ready(function(){
+			$('#gradient-1').gradient({
+				save : 'json',
+				type : 'radial',
+				position : 'top right',
+				target: '#color-set-1',
+				sliders : {
+					one : {
+						color : '#AF03BF',
+						position : 12
+					},
+					two : {
+						color : '#0000ff',
+						position : 100
+					}
+				}
+			});
+			
+			$('#gradient-2').gradient({
+				target: '#color-set-2',
+				paramsJson: {"type":"radial","typeRad":"ellipse","position":" left","sliders":{"one":{"color":"#050505","position":15},"two":{"color":"#ff3045","position":35}}}
+			});
+			
+			$('#gradient-3').gradient({
+				target : '#color-set-3',
+				paramsCss: 'background: radial-gradient(circle at top right, #e7ff4c 25% , #2efff1 25%);'
+			});
+			
+			$('#gradient-4').gradient({
+				save : 'css',
+				type : 'radial',
+				position : 'top right',
+				target: '#color-set-4',
+				sliders : {
+					one : {
+						color : '#AF03BF',
+						position : 12
+					},
+					two : {
+						color : '#0000ff',
+						position : 100
+					}
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>
