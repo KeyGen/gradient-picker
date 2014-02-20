@@ -232,7 +232,7 @@
 					$('.colorpicker').hide();
 				});
 				
-				$('.select-pos').on('change', function(){
+				$('.select-gradient').on('change', function(){
 					plugin.update(id, plugin, $(slider).slider("option", "values"), colorOne.val(), colorTwo.val());
 				});
 				
