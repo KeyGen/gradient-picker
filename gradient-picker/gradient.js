@@ -208,33 +208,20 @@
 				itemOne.css('background-color', this.options.sliders.one.color);
 				itemTwo.css('background-color', this.options.sliders.two.color);
 				
-				$(itemOne).ColorPicker({
+				$(itemOne).colpick({
 					color: this.options.sliders.one.color,
-					onShow: function (colpkr) {
-						$(colpkr).fadeIn(50);
-						return false;
-					},
-					onHide: function (colpkr) {
-						$(colpkr).fadeOut(50);
-						return false;
-					},
+					layout: 'hex',
+					submit: 0,
 					onChange: function (hsb, hex, rgb) {
 						itemOne.css('backgroundColor', '#' + hex);
 						colorOne.val('#' + hex);
 						plugin.update(id, plugin, $(slider).slider("option", "values"), colorOne.val(), colorTwo.val());
 					}
 				});
-				
-				$(itemTwo).ColorPicker({
+				$(itemTwo).colpick({
 					color: this.options.sliders.two.color,
-					onShow: function (colpkr) {
-						$(colpkr).fadeIn(50);
-						return false;
-					},
-					onHide: function (colpkr) {
-						$(colpkr).fadeOut(50);
-						return false;
-					},
+					layout: 'hex',
+					submit: 0,
 					onChange: function (hsb, hex, rgb) {
 						itemTwo.css('backgroundColor', '#' + hex);
 						colorTwo.val('#' + hex);
