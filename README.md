@@ -1,4 +1,4 @@
-Gradient-picker beta v 0.5
+Gradient-picker-resize
 =========
 
 Плагин jquery<br>
